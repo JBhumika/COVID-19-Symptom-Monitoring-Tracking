@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+            android:id="@+id/symptomsId"
+            android:layout_width="158dp"
+            android:layout_height="46dp"
+            android:text="@string/symptoms"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.73"
+            app:layout_constraintStart_toEndOf="@+id/videoViewId"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/measureHeartRateId"
+            app:layout_constraintVertical_bias="0.729"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp" />
+
+    <VideoView
+            android:id="@+id/videoViewId"
+            android:layout_width="187dp"
+            android:layout_height="219dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.071"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.363" />
+
+    <TextView
+            android:id="@+id/heartRateTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heart_rate"
+            app:layout_constraintBottom_toBottomOf="@+id/measureHeartRateId"
+            app:layout_constraintEnd_toEndOf="@+id/measureHeartRateId"
+            app:layout_constraintHorizontal_bias="0.024"
+            app:layout_constraintStart_toStartOf="@+id/measureHeartRateId"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.869" />
+
+    <Button
+            android:id="@+id/measureHeartRateId"
+            android:layout_width="388dp"
+            android:layout_height="56dp"
+            android:text="@string/measure_heart_rate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.347"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.696" />
+
+    <Button
+            android:id="@+id/measureRespRateId"
+            android:layout_width="389dp"
+            android:layout_height="56dp"
+            android:text="@string/measure_respiratory_rate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.318"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.884" />
+
+    <TextView
+            android:id="@+id/respRateTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/respiratory_rate"
+            app:layout_constraintBottom_toBottomOf="@+id/measureRespRateId"
+            app:layout_constraintEnd_toEndOf="@+id/measureRespRateId"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/measureRespRateId"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.914" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
